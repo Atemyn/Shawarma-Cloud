@@ -9,5 +9,5 @@ public class ShawarmaCloudApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShawarmaCloudApplication.class, args);
 	}
-
+	
 }
