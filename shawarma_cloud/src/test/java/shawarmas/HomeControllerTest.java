@@ -14,9 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import shawarmas.controllers.HomeController;
 
-@WebMvcTest(HomeController.class)
+@WebMvcTest()
 public class HomeControllerTest {
 	@Autowired
 	private MockMvc mockMvc;
