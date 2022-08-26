@@ -9,6 +9,9 @@
 		<h1>Design your shawarma!</h1>
 		<img th:src="@{/images/shawarmaCloud.jpg}"/>
 		<form method="POST" th:object="${shawarma}">
+			<span class="validationError"
+				th:if="${#fields.hasErrors('ingredients')}"
+				th:errors="*{ingredients}">Ingredients Amount Error</span>
 			<div class="grid">
 				<div class="ingredient-group" id="wraps">
 					<h3>Designate your wrap:</h3>
@@ -54,6 +57,9 @@
 			<div>
 				<h3>Name your shawarma creation:</h3>
 				<input type="text" th:field="*{name}"/>
+				<span class="validationError"
+					th:if="${#fields.hasErrors('name')}"
+					th:errors="*{name}">Shawarma Name Error</span>
 				<br/>
 				<button>Submit Your Shawarma</button>
 			</div>
